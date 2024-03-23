@@ -1,0 +1,64 @@
+﻿@model Emp_CRUD_DbFirst.Models.Emp_Details
+
+@{
+    ViewBag.Title = "Delete Employee";
+}
+
+<h2>Delete Employee Details</h2>
+
+<h3 style="color:red" >Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Email_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Email_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Contact_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Contact_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_City)
+        </dd>
+
+    </dl>
+
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

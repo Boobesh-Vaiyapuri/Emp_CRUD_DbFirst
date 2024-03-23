@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - TechNeurons</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background:linear-gradient(27deg,rgba(49,46,79,0.48),rgba(144,200,153,0.85)) ">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-success navbar-dark">
+        <div class="container">
+            @Html.ActionLink("TechNeurons", "Index", "Emp", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                   
+                    <li>@Html.ActionLink("Emp Details", "Index", "Emp", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Create Employee", "Create", "Emp", new { area = "" }, new { @class = "nav-link" })</li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+
+        <hr />
+        <footer class="flex-shrink-0 py-4 bg-dark text-white-50">
+            <div class="container text-center">
+                <div>Copyright &copy; <span>Developed by </span><a href="https://www.linkedin.com/in/boobeshvaiyapuri/">Boobesh Vaiyapuri</a> - at @DateTime.Now.Year.</div>
+            </div>
+         </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
